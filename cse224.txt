@@ -1,0 +1,57 @@
+fun main(args:Array<String>) {
+    var a = 40
+    println(a)
+    
+    val b = 10
+    b += a
+      
+}
+
+
+fun main(args:Array<String>) {
+    var a = 40
+    var b : String
+    print(a)
+    
+}
+
+
+
+fun main() {
+ 	val a = 10
+    val b = 20
+    val result = "sum of $a and $b is ${a+b}"
+    println(result)
+}
+
+
+
+fun main() {
+ 	val letter : Char
+    letter = 'a'
+    print("$letter")
+    print('\n')
+    print('\$')
+    print('\\')   
+}
+
+
+
+fun main() {
+	val name:String = """abc
+    abc
+      abc
+        abc
+          abc"""
+    print(name)
+    print('\n')
+    print('\n')
+    
+    val nam:String = """          abc
+    abc          abc
+                 
+          abc"""
+    
+    print(nam)
+     
+}
