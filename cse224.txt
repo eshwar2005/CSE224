@@ -55,3 +55,89 @@ fun main() {
     print(nam)
      
 }
+
+
+fun main(args: Array<String>) {
+    var arr1:Array<Int> = arrayOf(1,2,3,4)
+    
+    var arr2:Array<String> = arrayOf("a","b","c")
+    var squares = Array(5) {i -> i * i}
+    val firstNumber = arr1[0]
+    val secondword = arr2[1]
+ 	
+    println("Firstnumber: $firstNumber")
+    println("Secondword: $secondword")
+    
+	//Modifying elements
+	arr1[0] = 10       //modify first element
+	arr2[1] = "d"      //modify second element
+    
+    val modnum = arr1[0]
+    val modword = arr2[1]
+    
+    println("modified first number: $modnum")
+    println("modified second word: $modword")
+    
+}
+
+
+fun main(args: Array<String>) {
+    var arr1:Array<Array<Int>> = arrayOf(arrayOf(1,2,3,4),arrayOf(4,5,6))
+    println("Element at row 0, column 1: ${arr1[0][1]}")
+}
+
+
+// Typecasting
+fun main(args: Array<String>) {
+ 	val x:Int = 10
+	val y:Long = x.toLong()
+    println(y)
+}
+
+
+
+//Operators
+fun main(args: Array<String>) {
+	
+    var a = 10
+    var b = 20
+    
+    //Arithmetic operators
+    println("Addition of $a and $b: ${a+b}")
+    println("Subtraction of $b and $a: ${b-a}")
+    println("Multiplication of $a and $b: ${a*b}")
+    println("Division of $b and $a: ${b/a}")
+
+    
+    //Relational operators
+    println("is $a > $b: ${a>b}")
+    println("is $a < $b: ${a<b}")
+    println("is $a >= $b: ${a>=b}")
+    println("is $a <= $b: ${a<=b}")
+    println("is $a == $b: ${a==b}")
+    println("is $a != $b: ${a!=b}")
+    
+    
+    //Assignment operators
+    println("$a += $b : $a = $a + $b : ${a+b}")
+    println("$a -= $b : $a = $a - $b : ${a-b}")
+    println("$a *= $b : $a = $a * $b : ${a*b}")
+    println("$a /= $b : $a = $a / $b : ${a/b}")
+    
+    
+    //Unary operators
+    val unaryPlus = +a
+    println("Unary Plus: $unaryPlus") 
+    
+    val unaryMinus = -a
+    println("Unary Minus: $unaryMinus") 
+    
+    a++
+    println("Increment: $a") 
+    
+    b--
+    println("Decrement: $b") 
+    
+    
+    //Logical operators
+}
