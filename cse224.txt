@@ -335,9 +335,112 @@ fun main()
     }
 }
 
+fun main()
+{
+    for (i in 1..5){
+        println("Number: $i")
+    }
+}
 
 
 
+
+fun main()
+{
+    for (i in 1 until 5){
+        println("Number: $i")
+    }
+}
+
+
+
+//reverse loop 
+fun main(args:Array<String>)
+{
+    for (item in 5 downTo 1){
+        
+        print(item)
+    }
+}
+
+//reverse with  step size
+
+fun main(args:Array<String>)
+{
+    for (item in 5 downTo 1 step 2){
+        
+        print(item)
+    }
+}
+
+
+
+
+
+
+fun main(args:Array<String>)
+{
+    val fruits = listOf("apple","banana","cherry")
+    for (fruit in fruits){
+        println("fruit: $fruit")
+    }
+}
+
+
+
+
+
+
+
+
+fun main(args:Array<String>)
+{
+    val fruits = listOf("apple","banana","cherry")
+    for (index in fruits.indices){
+        println("Fruits at index $index : ${fruits[index]}")
+    }
+}
+
+
+
+
+fun main()
+{
+ 	var i = 5
+    while (i > 0){
+        println("value in: $i")
+    }
+}
+
+
+
+
+
+fun main()
+{
+ 	var i = 5
+    do{
+     
+        println("value is: $i")
+ 		i--   
+    }
+	while (i> 0)
+}
+
+
+
+
+
+//User defined functions
+
+fun demo()
+{
+    println("Hello, World!")
+}
+fun main(args:Array<String>)
+{
+    demo() 
+}
 
 
 
