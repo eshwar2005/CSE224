@@ -1,143 +1,345 @@
-fun main(args:Array<String>) {
-    var a = 40
-    println(a)
+// fun main() 
+// {
+// //     var a = 40
+// //     println(a)
+// //     val b = 80
+// //     b = 70
+// //     print(b)
     
-    val b = 10
-    b += a
-      
-}
-
-
-fun main(args:Array<String>) {
-    var a = 40
-    var b : String
-    print(a)
+// //     var a = 40
+// //     var b : String = "Hello"
+// //     println(a)
+// //     print(b)
     
+//     val kotlin = "hello"
+//     println(kotlin)
+   
+// }
+// //  println(kotlin)
+
+
+// class person
+// {
+//     var kotlin = "hello"
+//     fun displayinfo()
+//     {
+//         println(kotlin)
+//     }
+// }
+// fun main()
+// {
+//     val person = person()
+//     person.displayinfo()
+// }
+
+// fun main(){
+//     val a = 10
+//     val b = 20
+//     val result = "sum of $a and $b is ${a + b}"
+//     println(result)
+// }
+
+// fun main(){
+//     val letter: Char
+// 	letter = 'A'
+//     print("$letter")
+//     print('\n')
+//     println('\$')
+//     print('\\')
+// }
+
+// fun main(){
+//     val name: String
+//     name = 
+//    """kowsik
+// kowsik
+// kowsik
+// kowsik
+// kowsik"""
+//     print("$name")
+// }
+// fun main(){
+//     val name: String
+//     name = 
+//    		"""kowsik
+//     kowsik
+//         kowsik
+//             kowsik
+//                 kowsik"""
+//     print("$name")
+// }
+fun main(){
+    val name: String
+    name = 
+   	"""	kowsik
+kowsik		kowsik
+	kowsik"""
+    print("$name")
 }
-
-
-
-fun main() {
- 	val a = 10
-    val b = 20
-    val result = "sum of $a and $b is ${a+b}"
-    println(result)
-}
-
-
-
-fun main() {
- 	val letter : Char
-    letter = 'a'
-    print("$letter")
-    print('\n')
-    print('\$')
-    print('\\')   
-}
-
-
-
-fun main() {
-	val name:String = """abc
-    abc
-      abc
-        abc
-          abc"""
-    print(name)
-    print('\n')
-    print('\n')
+---------------------------------------------------------
+DAY - 3
+---------------------------------------------------------
+fun main(){
+    val numbers = arrayOf(1,2,3,4,5)
+    val words: Array<String> = arrayOf("Kotlin", "java", "python")
+    val squares = Array(5) { i -> i * i}
     
-    val nam:String = """          abc
-    abc          abc
-                 
-          abc"""
+    val firstnumber = numbers[0]
+    val secondnumber = words[1]
     
-    print(nam)
+    println("first number: $firstnumber")
+    println("second number: $secondnumber")
+    
+    //modify the element
+    numbers[0] = 45
+    words[1] = "c++"
+    println("modified first number: ${numbers[0]}")
+    println("modified second number: ${words[1]}")
+
+    println("Two D Array")
+    var TwoD= arrayOf(arrayOf(1,2,3), arrayOf(4,5,6), arrayOf(7,8,9));
+    println(TwoD[2][1]);//row followed by col
+    
+    var matrix:Array<Array<Int>> = arrayOf(arrayOf(1,2,3), arrayOf(4,5,6), arrayOf(7,8,9));
+    println(matrix[0][2]);
+}
+--------------------------------
+fun main(args:Array<String>)
+{
+    val x: Int = 100
+//     val y: Long = x
+//     println(y)
+    
+    val z:Long=x.toLong();
+    println(z)
+}
+----------------------------
+fun main(){
+    val a="hello"
+    val b:String= a as String
+    println("Unsafe cast Result: $b")
+
+    val c:Int?=a as? Int
+    println("Safe Cast Result: $c")
+}
+-------------------------------------
+DAY - 4
+-------------------------------------
+OPERATORS:-
+
+ fun main(){
+    var a=10;
+    var b=20;
+    var isTrue=true;
+    var isFalse=false;
+    //arithmetic operators
+    println("Addition $a + $b: ${a+b}"); //a.plus(b);
+    println("product $a * $b: ${a*b}");	//a.times(b);
+    println("Subtraction $a - $b: ${a-b}"); //a.minus(b);
+    println("Divison $a / $b: ${a/b}");	//a.div(b);
+    println("Modulus $a % $b: ${a%b}");
+	println("Modulus $a % $b: ${a.rem(b)}\n");
+    
+    
+    //relational operators
+    println("Greater than $a > $b: ${a>b}"); //a.compareTo(b)>0;
+    println("Less than $a < $b: ${a<b}"); //a.compareTo(b)>0;
+    println("Greater than equal $a >= $b: ${a>=b}"); //a.compareTo(b)>0;
+    println("Less than $a <= $b: ${a<=b}"); //a.compareTo(b)>0;
+    println("Equal to $a == $b: ${a==b}"); //a?.eqauls(b)?:(b===null);
+    println("Not Equal to than $a != $b: ${a!=b} \n"); //(!a?.eqauls(b)?:(b===null))>0;
+    
+    
+    //assignment operators
+    var x=10;
+    var y=20;
+    x+=y;
+  
+    println("Addition $a += $b: ${x}"); //a.plus(b);
+    x*=y;
+    println("product $a *= $b: ${x}");	//a.times(b);
+    x-=y;
+    println("Subtraction $a -= $b: ${x}"); //a.minus(b);
+    x/=y;
+    println("Divison $a /= $b: ${x}");	//a.div(b);
+ 	x%=y;
+    println("Modulus $a %= $b: ${x}");
      
+     
+     
+     
+   // unary operators;
+    a=10;
+    println(" +$a: ${+a}");
+    println(" -$a: ${-a}");
+    println(" ++$a: ${++a}");
+    println(" --$a: ${--a}");
+    println(" !$a: ${!a}");
+     
+ }
+------------------------------------
+//DAY - 5
+
+
+//simple if statement
+// fun main()
+// {
+//     var temp = 25
+//     if (temp > 20)
+//     {
+//         println("it is a warm day")
+//     }
+// }
+
+
+
+//if-else statement
+//  fun main()
+// {
+//     var temp = 19
+//     if (temp > 20)
+//     {
+//         println("it is a warm day")
+//     }
+//     else
+//     println("good weather")
+// }
+
+// fun main()
+// {
+//     var marks = 85
+//     if(marks >=90)
+//     {
+//         println("A")
+//     }
+//     else if (marks >=85 && marks <90){
+//         println("B")
+//     }
+//     else if (marks>=70 && marks <85)
+//     {
+//         println("D")
+//     }
+// 	else {
+//         println("D")
+//     }
+// }
+
+
+// fun main(){
+//     var sign='*'
+//         var a=8;
+//         var b=5;
+//         if(sign=='+'){
+//             println("${a+b}")
+//         }
+//        else if(sign=='*'){
+//             println("${a*b}")
+//         }
+//        else if(sign=='-'){
+//             println("${a-b}")
+//         }
+//        else if(sign=='/'){
+//             println("${a/b}")
+//         }
+//        else if(sign=='%'){
+//             println("${a%b}")
+//         }
+//        else{
+//            println("error")
+//        }
+// }
+
+// fun main ()
+// {
+//     var sign='/'
+//     var a=100;
+//     var b=0;
+//     if(sign=='+'){
+//         println("${a+b}")
+//     }
+//    else if(sign=='*'){
+//         println("${a*b}")
+//     }
+//    else if(sign=='-'){
+//         println("${a-b}")
+//     }
+//    else if(sign=='/'){
+//        	if(b==0)println("b should not be zero")
+//         else
+//         println("${a/b}")
+//     }
+//    else if(sign=='%'){
+//         println("${a%b}")
+//     }
+//    else{
+//        println("error")
+//    }
+// }
+
+//age classification
+fun main()
+{
+  var age=13;
+     if(age<13){
+        println("child")
+    }
+   else if(age<19 && age>=13){
+        println("teenage")
+    }
+   else{
+       println("adult")
+   }
+   
+   age=13;
+     if(age<13){
+        println("child")
+    }
+   else if(age in 13..19){
+        println("teenage")
+    }
+   else if(age in 20..64){
+        println("adult")
+    }
+   else{
+       println("senior")
+   }
+}
+
+//when package
+fun main()
+{
+   val dayofweek = 3
+    val dayname = when(dayofweek)
+    {
+        1-> "monday"
+        2-> "tuesday"
+        3-> "wednesday"
+        4-> "thusday"
+        5-> "friday"
+        6-> "saturday"
+        7-> "sunday"
+        else -> "invalid day"
+    }
+    println("Day name: $dayname")
+}
+
+//when as a statement
+fun main()
+{
+    val num = 8
+    when{
+         num % 2 == 0 ->println("$num is even")
+         num % 2 != 0 ->println("$num is odd")
+         else -> println("unexpected number")
+         
+    }
 }
 
 
-fun main(args: Array<String>) {
-    var arr1:Array<Int> = arrayOf(1,2,3,4)
-    
-    var arr2:Array<String> = arrayOf("a","b","c")
-    var squares = Array(5) {i -> i * i}
-    val firstNumber = arr1[0]
-    val secondword = arr2[1]
- 	
-    println("Firstnumber: $firstNumber")
-    println("Secondword: $secondword")
-    
-	//Modifying elements
-	arr1[0] = 10       //modify first element
-	arr2[1] = "d"      //modify second element
-    
-    val modnum = arr1[0]
-    val modword = arr2[1]
-    
-    println("modified first number: $modnum")
-    println("modified second word: $modword")
-    
-}
-
-
-fun main(args: Array<String>) {
-    var arr1:Array<Array<Int>> = arrayOf(arrayOf(1,2,3,4),arrayOf(4,5,6))
-    println("Element at row 0, column 1: ${arr1[0][1]}")
-}
-
-
-// Typecasting
-fun main(args: Array<String>) {
- 	val x:Int = 10
-	val y:Long = x.toLong()
-    println(y)
-}
 
 
 
-//Operators
-fun main(args: Array<String>) {
-	
-    var a = 10
-    var b = 20
-    
-    //Arithmetic operators
-    println("Addition of $a and $b: ${a+b}")
-    println("Subtraction of $b and $a: ${b-a}")
-    println("Multiplication of $a and $b: ${a*b}")
-    println("Division of $b and $a: ${b/a}")
 
-    
-    //Relational operators
-    println("is $a > $b: ${a>b}")
-    println("is $a < $b: ${a<b}")
-    println("is $a >= $b: ${a>=b}")
-    println("is $a <= $b: ${a<=b}")
-    println("is $a == $b: ${a==b}")
-    println("is $a != $b: ${a!=b}")
-    
-    
-    //Assignment operators
-    println("$a += $b : $a = $a + $b : ${a+b}")
-    println("$a -= $b : $a = $a - $b : ${a-b}")
-    println("$a *= $b : $a = $a * $b : ${a*b}")
-    println("$a /= $b : $a = $a / $b : ${a/b}")
-    
-    
-    //Unary operators
-    val unaryPlus = +a
-    println("Unary Plus: $unaryPlus") 
-    
-    val unaryMinus = -a
-    println("Unary Minus: $unaryMinus") 
-    
-    a++
-    println("Increment: $a") 
-    
-    b--
-    println("Decrement: $b") 
-    
-    
-    //Logical operators
-}
+
+
+
